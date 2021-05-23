@@ -1,0 +1,12 @@
+{
+  "name": "mobile-chat-app",
+  "displayName": "mobile-chat-app",
+  "expo": {
+    "name": "mobile-chat-app",
+    "slug": "mobile-chat-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
