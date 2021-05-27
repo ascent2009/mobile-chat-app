@@ -7,7 +7,6 @@ import { StyleSheet, Text, View, Button, TextInput, SafeAreaView } from "react-n
 import LogIn from './navigation/LogIn';
 import Home from './navigation/Home';
 import CreateAccount from './navigation/CreateAccount';
-// import ChatRoom from './navigation/Home';
 
 const Stack = createStackNavigator();
 

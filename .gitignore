@@ -47,6 +47,7 @@ _Home.js
 _LogIn.js
 ChatRoom.js
 Fire.js
+$$Home.js
 
 # Bundle artifacts
 *.jsbundle

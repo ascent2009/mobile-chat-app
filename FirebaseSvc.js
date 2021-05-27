@@ -3,7 +3,7 @@ import firebase from 'firebase';
 class FirebaseSvc {
   
   constructor() {
-    if (!firebase.apps.length) { //avoid re-initializing
+    if (!firebase.apps.length) {
       firebase.initializeApp({
         apiKey: "AIzaSyBYe5HDfY6FyfkK7WD6lPThNmtOYMv0NaI",
         authDomain: "rn-chat-4eb0b.firebaseapp.com",
@@ -28,15 +28,19 @@ class FirebaseSvc {
             .then(function() {
                 const userf = firebase.auth().currentUser;
                 userf.updateProfile({ displayName: user.name})
-            .then(function() {
-                alert(`User ${user.name} was created successfully.`);
-            }, function(error) {
-                console.warn("Error update displayName.");
-            });
-        }, function(error) {
-            console.error(`got error: ${error.message}`);
-            alert("Create account failed.");
-        });
+                    .then(
+                        function() {
+                            alert(`User ${user.name} was created successfully.`);
+                        },
+                        function(error) {
+                            console.warn("Error update displayName.");
+                        });
+                },
+                function(error) {
+                    console.error(`got error: ${error.message}`);
+                    alert("Create account failed.");
+                }
+            );
     }
 
     get ref() {
@@ -64,9 +68,11 @@ class FirebaseSvc {
     send = messages => {
       for (let i = 0; i < messages.length; i++) {
         const { text, user } = messages[i];
-        const message = {text, user,
-                        createdAt: this.timestamp,
-                         };
+        const message = {
+            text,
+            user,
+            createdAt: this.timestamp,
+            };
         this.ref.push(message);
     }
 };

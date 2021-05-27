@@ -54,24 +54,16 @@ export default function LogIn({ navigation }) {
         <TextInput style={styles.input}
             onChangeText={onChangeTextPassword}
         />
-        {/* <Button style={styles.button} title="Go to Chat Room"
-          onPress = {onPressLogin}
-        />
-        <Button style={styles.button} title="Create account"
-          onPress = {() => navigation.navigate('СreateAccount')}
-        /> */}
         <TouchableOpacity
-        //   title="Create Account"
             style={styles.buttonContainer}
             onPress = {onPressLogin}
-          >
+        >
           <Text style={styles.buttonText}>Go to Chat Room</Text>
         </TouchableOpacity>
         <TouchableOpacity
-        //   title="Create Account"
-          style={styles.buttonContainer}
+            style={styles.buttonContainer}
             onPress = {() => navigation.navigate('СreateAccount')}
-          >
+        >
           <Text style={styles.buttonText}>Create a new account</Text>
         </TouchableOpacity>
       </View>
@@ -83,7 +75,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: 12,
-    // alignItems: "center",
     justifyContent: "flex-start",
     },
   title: {
@@ -95,8 +86,6 @@ const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     marginTop: 20,
-    // backgroundColor: "rgb(0,134,255)",
-    // width: 100,
     borderColor: 'blue',
     borderRadius: 15,
     borderWidth: 1,
@@ -118,15 +107,12 @@ const styles = StyleSheet.create({
     marginTop: offset * 2,
     borderRadius: 20,
     paddingVertical: 10,
-    // paddingHorizontal: 12
   },
   buttonText: {
-    // marginLeft: offset,
     fontSize: offset,
     fontWeight: 'bold',
     color: "#fff",
     alignSelf: "center",
-    // verticalAlign: "middle"
   },
 });
 

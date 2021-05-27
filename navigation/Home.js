@@ -12,17 +12,10 @@ export default class Home extends React.Component {
          messages: [],
      };
 
-    static navigationOptions = ({ navigation }) => ({
-        title: (navigation.state.params || {}).name || 'Chat!',
-    });
-
-    get user() {
+   get user() {
         return {
         name: this.props.route.params.name,
         email: this.props.route.params.email,
-        
-        // id: firebaseSvc.uid,
-        // _id: firebaseSvc.uid, // need for gifted-chat
         };
     }
 
