@@ -43,6 +43,11 @@ buck-out/
 *.keystore
 !debug.keystore
 
+_Home.js
+_LogIn.js
+ChatRoom.js
+Fire.js
+
 # Bundle artifacts
 *.jsbundle
 
